@@ -96,6 +96,22 @@ angular.module('starter.controllers', [])
     */
 })
 
+.controller('AboutTheProjectCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
+    
+    $ionicHistory.nextViewOptions({
+      disableBack: true
+    });
+    
+    $timeout(function() {
+        ionicMaterialMotion.fadeSlideIn({
+            selector: '.animate-fade-slide-in .item'
+        });
+    }, 200);
+
+    // Activate ink for controller
+    ionicMaterialInk.displayEffect();
+})
+
 .controller('ListCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
     
     $ionicHistory.nextViewOptions({

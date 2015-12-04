@@ -129,6 +129,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+  
+  .state('app.abouttheproject', {
+    url: '/abouttheproject',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/abouttheproject.html',
+        controller: 'AboutTheProjectCtrl'
+      }
+    }
+  })
 
   .state('app.browse', {
       url: '/browse',
@@ -158,5 +168,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/inquiry');
+  $urlRouterProvider.otherwise('/app/category');
 });
