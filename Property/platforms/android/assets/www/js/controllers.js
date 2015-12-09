@@ -56,6 +56,12 @@ angular.module('starter.controllers', [])
   console.log("huck");
 })
 
+.controller('ContactUs', function($scope) {
+  $scope.call = function(number){
+    window.open('tel:'+number, '_system');
+  }
+})
+
 .controller('CartCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
     
     var myBeaAdd = angular.element( document.querySelector( '#beaconMsg' ) );
@@ -94,6 +100,38 @@ angular.module('starter.controllers', [])
     // Activate ink for controller
     ionicMaterialInk.displayEffect();
     */
+})
+
+.controller('AboutTheProjectCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
+    
+    $ionicHistory.nextViewOptions({
+      disableBack: true
+    });
+    
+    $timeout(function() {
+        ionicMaterialMotion.fadeSlideIn({
+            selector: '.animate-fade-slide-in .item'
+        });
+    }, 200);
+
+    // Activate ink for controller
+    ionicMaterialInk.displayEffect();
+})
+
+.controller('WhatAreOfferingCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
+    
+    $ionicHistory.nextViewOptions({
+      disableBack: true
+    });
+    
+    $timeout(function() {
+        ionicMaterialMotion.fadeSlideIn({
+            selector: '.animate-fade-slide-in .item'
+        });
+    }, 200);
+
+    // Activate ink for controller
+    ionicMaterialInk.displayEffect();
 })
 
 .controller('ListCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {

@@ -120,6 +120,14 @@ module.exports = [
         "clobbers": [
             "launchnavigator"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
+        "clobbers": [
+            "cordova.InAppBrowser.open",
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -135,7 +143,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.0.0",
     "de.appplant.cordova.plugin.email-composer": "0.8.2",
     "de.appplant.cordova.plugin.local-notification": "0.8.2-dev",
-    "uk.co.workingedge.phonegap.plugin.LaunchNavigator": "2.9.2"
+    "uk.co.workingedge.phonegap.plugin.LaunchNavigator": "2.9.2",
+    "cordova-plugin-inappbrowser": "1.1.0"
 }
 // BOTTOM OF METADATA
 });

@@ -129,6 +129,44 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
+  
+  .state('app.commercialproperties', {
+    url: '/commercialproperties',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/commercialproperties.html'
+      }
+    }
+  })
+  
+  .state('app.residentialproperties', {
+    url: '/residentialproperties',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/residentialproperties.html'
+      }
+    }
+  })
+  
+  .state('app.abouttheproject', {
+    url: '/abouttheproject',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/abouttheproject.html',
+        controller: 'AboutTheProjectCtrl'
+      }
+    }
+  })
+  
+    .state('app.whatweareoffering', {
+        url: '/whatweareoffering',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/whatweareoffering.html',
+            controller: 'WhatAreOfferingCtrl'
+          }
+        }
+      })
 
   .state('app.browse', {
       url: '/browse',
@@ -158,5 +196,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/inquiry');
+  $urlRouterProvider.otherwise('/app/category');
 });
