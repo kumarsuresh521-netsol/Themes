@@ -14,41 +14,22 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <img src="img/icon_p.jpg" style="width: 100%; height: 200px; background:#387EF5;;" />
+      <h1 class="title">Left</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
-       
-        <ion-item menu-close href="#/app/category" class="item item-icon-left" style="margin-top:160px; border-bottom:1px solid rgba(179, 179, 179, 0.35)">
-        <i class="icon ion-home" style="color: #387EF5;"></i>
-          Home
+        <ion-item menu-close ng-click="login()">
+          Login
         </ion-item>
-        
-        <ion-item menu-close href="#/app/map" class="item item-icon-left" style="border-bottom:1px solid rgba(179, 179, 179, 0.35)">
-        <i class="icon ion-map" style="color: #387EF5;"></i>
-          Map
+        <ion-item menu-close href="#/app/search">
+          Search
         </ion-item>
-        
-        <ion-item menu-close href="#/app/inquiry" class="item item-icon-left" style="border-bottom:1px solid rgba(179, 179, 179, 0.35)">
-        <i class="icon ion-document-text" style="color: #387EF5;"></i>
-          Inquiry
+        <ion-item menu-close href="#/app/browse">
+          Browse
         </ion-item>
-        
-        <ion-item menu-close href="#/app/contactus" class="item item-icon-left" style="border-bottom:1px solid rgba(179, 179, 179, 0.35)">
-        <i class="icon ion-email" style="color: #387EF5;"></i>
-          Contact Us
+        <ion-item menu-close href="#/app/playlists">
+          Playlists
         </ion-item>
-        
-        <ion-item menu-close href="#/app/aboutus" class="item item-icon-left" style="border-bottom:1px solid rgba(179, 179, 179, 0.35)">
-        <i class="icon ion-person-stalker" style="color: #387EF5;"></i>
-          About Us
-        </ion-item>
-        
-        <ion-item menu-close href="#/app/category" class="item item-icon-left" style="border-bottom:1px solid rgba(179, 179, 179, 0.35)">
-        <i class="icon ion-chatbox-working" style="color: #387EF5;"></i>
-          News & Updates
-        </ion-item>
-        
       </ion-list>
     </ion-content>
   </ion-side-menu>

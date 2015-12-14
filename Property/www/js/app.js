@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ionic-material', 'ionMdInput'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,10 +22,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-    
-    if(!ionic.Platform.isIOS())$ionicConfigProvider.scrolling.jsScrolling(false);
-    
+.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
     .state('app', {
@@ -34,108 +31,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-    
-  .state('app.category', {
-    url: '/category',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/category.html',
-        controller: 'CategoryCtrl'
-      }
-    }
-  })
-  
-  .state('app.lists', {
-    url: '/category/:categoryId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/lists.html',
-        controller: 'ListCtrl'
-      }
-    }
-  })
-  
-  .state('app.aboutus', {
-    url: '/aboutus',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/aboutus.html'
-      }
-    }
-  })
-  
-  .state('app.contactus', {
-    url: '/contactus',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/contactus.html'
-      }
-    }
-  })
-  
-  .state('app.map', {
-    url: '/map',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/map.html'
-      }
-    }
-  })
-  
-  .state('app.inquiry', {
-    url: '/inquiry',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/inquiry.html'
-      }
-    }
-  })
-  
-  .state('app.details', {
-    url: '/category/:listId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/details.html',
-        controller: 'DetailsCtrl'
-      }
-    }
-  })
-  
-  .state('app.pane', {
-    url: '/pane',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/pane.html',
-        controller: 'PaneCtrl'
-      }
-    }
-  })
-  
-  .state('app.cart', {
-    url: '/cart',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/cart.html',
-        controller: 'CartCtrl'
-      }
-    }
-  })
-  
+
   .state('app.search', {
     url: '/search',
     views: {
       'menuContent': {
         templateUrl: 'templates/search.html'
-      }
-    }
-  })
-  
-  .state('app.abouttheproject', {
-    url: '/abouttheproject',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/abouttheproject.html',
-        controller: 'AboutTheProjectCtrl'
       }
     }
   })
@@ -154,6 +55,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         'menuContent': {
           templateUrl: 'templates/playlists.html',
           controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+    
+    .state('app.category', {
+      url: '/category',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/category.html'
         }
       }
     })
