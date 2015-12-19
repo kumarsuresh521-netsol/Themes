@@ -212,7 +212,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('InquiryCtrl', function($scope, $stateParams, EmailComposer) { 
-    $scope.meetingtime = "Metting Time";
+    $scope.meetingtime = "Meeting Time";
     
     $scope.showSelectValue = function(meetingtime) {
         $scope.meetingtime = meetingtime;
@@ -230,7 +230,7 @@ angular.module('starter.controllers', [])
             msg.innerHTML = "Please Enter your name.";
                setTimeout(function() {
                     msg.innerHTML = ''
-                }, 3000);
+                }, 3000000);
                 return;
         } else if(email){
              var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -374,7 +374,7 @@ angular.module('starter.controllers', [])
                     
                     
         contentStr += '<p>+91-9216590011, 22, 33</p>';
-        contentStr += '<p><a target="_blank" href="http://www.idyllicgroup.in/">http://www.idyllicgroup.in/</a></p>';
+        contentStr += '<p>http://www.idyllicgroup.in/</p>';
         
         contentStr += '<br/><b>Click on marker to show route.</b>';
         

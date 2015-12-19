@@ -40,3 +40,6 @@ body.bar-subheader-slide-away {
    FONT-SIZE: 12PX!important;
    FONT-WEIGHT: 300!important;
 }
+.bar .button{
+  min-width: 85px important;
+}
