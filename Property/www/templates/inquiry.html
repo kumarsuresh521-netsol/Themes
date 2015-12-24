@@ -1,7 +1,6 @@
 <ion-view view-title="Inquiry Form">
-  <ion-content ng-controller="InquiryCtrl">
-  
-  <div class="card" id="msg" style="text-align: center;  padding: 0 5px 0px 5px; background: #458A29; margin-bottom: 16px; color: #fff;"></div>
+  <ion-content ng-controller="InquiryCtrl" class="inquiryform">
+
     <div class="list list-inset" style="border: none;">
       <label class="item item-input" style="border: 1px solid #ddd;"> 
         <i class="icon ion-person" style="font-size: 25px; padding-right:15px; color: #387EF5;"></i><input type="text" placeholder="Name" ng-model="name"/>  
@@ -31,5 +30,6 @@
       <br />
       <button class="button button-block button-positive" ng-click="submitForm()"> Submit </button>
     </div>
+    <div class="card" id="msg"></div>
   </ion-content>
 </ion-view>

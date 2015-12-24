@@ -1,77 +1,16 @@
 angular.module('starter.controllers', [])
 
-.directive('scrollWatch', function($rootScope, ionicMaterialMotion, ionicMaterialInk, $timeout) { 
-   // $rootScope.something = false; //console.log($rootScope);
-  return function(scope, elem, attr) {
-    var start = 0;
-    var threshold = 2;
-    var abc = document.getElementById("MyHead");
-    
-    elem.bind('scroll', function(e) { console.log(e ); console.log(e.detail.scrollTop);
-    e.bubbles = true; //console.log($rootScope);
-    console.log(e.detail.scrollTop); console.log(threshold); //console.log(threshold)
-      if(e.detail.scrollTop - start > threshold) { console.log("e ");
-      
-      // Set Motion
-    $timeout(function() {
-        $rootScope.something = true;
-        ionicMaterialMotion.slideUp({
-            selector: '.slide-up'
-        });
-    }, 300);
+.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
-    $timeout(function() {
-        ionicMaterialMotion.fadeSlideInRight({
-            startVelocity: 3000
-        });
-    }, 700);
-
-    // Set Ink
-    ionicMaterialInk.displayEffect();
-    
-        
-        $rootScope.slideHeader = true;
-        
-      } else { console.log("f");
-        $rootScope.slideHeader = false;
-        $rootScope.something = false;
-      }
-      if ($rootScope.slideHeaderPrevious >= e.detail.scrollTop - start) {
-        //$rootScope.slideHeader = false; console.log("ff ");
-        //$rootScope.something = false;
-      }
-      $rootScope.slideHeaderPrevious = e.detail.scrollTop - start;
-      $rootScope.$apply();
-    });
-  };
-})
-
-.controller('PaneCtrl', function($scope, $ionicScrollDelegate, $rootScope) {
-  $rootScope.MyHead = false;
-  $rootScope.something = false;
-  $rootScope.slideHeaderPrevious = 0;
-})
-
-.controller('beaconCtrl', function($scope, $ionicScrollDelegate, $rootScope) {
-  console.log("huck");
 })
 
 .controller('AboutTheProjectCtrl', function($scope, $ionicScrollDelegate, $rootScope) {
-  console.log("huck");
+  var description = 'With similar sonata treasured in Panchkula, Panchkula Extn. II is developed with surplus benefits to augment the paramount. Panchkula Extn. II is an approved township by Town and Country Planning, Department of Haryana. Panchkula Extn. II is planned by Govt. of Haryana with the motive to expand space for future novelty, both in terms of society & technology. Now to build a sheer abode, Sector 12 the heart of city was chosen to entrench Panchkula Eco City. The crown area of sector 12 has perpetual benefits to offer to its residents. Situated on NH-73, 15 kms from Chandigarh, Panchkula Eco City is selected with 300 ft. wide green belts in front & 100 ft. at the back. With four lane road planned "to be laid" by NHAI for smooth traffic flow, two World Class multilevel parkings, 80 ft. circulation road in front, 200 ft. on one side and 40-80 ft. internal circulation roads, there are much more comprehension to amaze you. Being close to upcoming 600 acres area acquired by HSIIDC in sector 10 & 13, existing HSIIDC estate itself and thoroughly connected to Panchkula Industrial Area & I.T. Park, Panchkula Eco City offers you close at hand employment opportunities, to gear your career calls. The surplus feature of the sector & township site both is, the Easy drive connectivity to Airport & proposed flyover connecting sector 12 to sector 17 for occupants to cross the highway with ease. To precise the list of amenities, Panchkula Eco City is designed with Showrooms & Convenience Shops, 24 Hrs Operational ATMs in vicinity, Zee School in 1 km approach area & 16 Hole Golf Course to offer a sheer living space. All this and much more illustrations boated at your disposal, leads to exceptional recital of our motive to serve PERFECTION to our clientele.';
+  $scope.description = description;
 })
 
 .controller('CartCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
     
-    var myBeaAdd = angular.element( document.querySelector( '#beaconMsg' ) );
-    myBeaNoti = 1;
-    myBeaNoti2 = 2;
-	var element = '';
-	  
-    myBeaAdd.html(element);
-                
-    $ionicHistory.nextViewOptions({
-      disableBack: true
-    });
     // Set Motion
     $timeout(function() {
         ionicMaterialMotion.fadeSlideIn({
@@ -85,119 +24,6 @@ angular.module('starter.controllers', [])
 
 .controller('CategoryCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
     
-    $ionicHistory.nextViewOptions({
-      disableBack: true
-    });
-    /*
-    $timeout(function() {
-        ionicMaterialMotion.fadeSlideIn({
-            selector: '.animate-blinds .item'
-        });
-    }, 1000);
-
-    // Activate ink for controller
-    ionicMaterialInk.displayEffect();
-    */
-})
-
-.controller('ListCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
-    
-    $ionicHistory.nextViewOptions({
-      disableBack: true
-    });
-    
-    $timeout(function() {
-        ionicMaterialMotion.fadeSlideIn({
-            selector: '.animate-fade-slide-in .item'
-        });
-    }, 200);
-
-    // Activate ink for controller
-    ionicMaterialInk.displayEffect();
-})
-
-.controller('DetailsCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory, $rootScope) {
-    
-    $rootScope.slideHeader = false;
-    $rootScope.slideHeaderPrevious = 0;
-  
-    $ionicHistory.nextViewOptions({
-      disableBack: true
-    });
-        
-    // Set Motion
-    $timeout(function() {
-        ionicMaterialMotion.slideUp({
-            selector: '.slide-up'
-        });
-    }, 300);
-
-    $timeout(function() {
-        ionicMaterialMotion.fadeSlideInRight({
-            startVelocity: 3000
-        });
-    }, 700);
-
-    // Set Ink
-    ionicMaterialInk.displayEffect();
-    
-    $scope.quantity = 1;
-    $scope.myquantity = function(type){
-       var quantity = 1;
-        if(type == 1){
-            quantity = $scope.quantity + 1;
-        }
-        
-        if(type == 0){
-            quantity = $scope.quantity - 1;
-        }
-        
-        if(quantity < 1){
-            quantity = 1;
-        }
-        return $scope.quantity = quantity;
-    }
-})
-
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
-
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-
-  // Form data for the login modal
-  $scope.loginData = {};
-
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
-
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
-  };
-
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };
 })
 
 .controller('PlaylistsCtrl', function($scope) {
@@ -230,7 +56,7 @@ angular.module('starter.controllers', [])
             msg.innerHTML = "Please Enter your name.";
                setTimeout(function() {
                     msg.innerHTML = ''
-                }, 3000000);
+                }, 3000);
                 return;
         } else if(email){
              var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -492,8 +318,4 @@ angular.module('starter.controllers', [])
                   });  //alert("Hello");
                }
 
-})
-
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
 });

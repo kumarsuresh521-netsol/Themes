@@ -7697,3 +7697,126 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+  /* About The Project */
+.abouttheproject img{
+  width: 100% !important; 
+  height:220px !important;
+}
+
+.abouttheproject p{
+    padding:10px !important;
+  }
+  .abouttheproject h2{
+    text-align: center;
+  }
+.abouttheproject h3{
+    padding:10px !important;
+  }
+.abouttheproject ul{
+    padding:10px !important;
+  }
+.abouttheproject ul li .icon{
+    color: #387EF5;
+  }
+
+  /* About Us */
+  .aboutus p{
+    padding: 10px !important;
+  }
+
+  /* Category Panchkula Extension One */
+  .panchkulaextension .card .item{
+      min-height: 210px !important;
+  }
+  .panchkulaextension h2{
+    FONT-SIZE: 16PX !important;
+    FONT-WEIGHT: 600 !important;
+    border-top:1px solid rgba(255, 255, 255, 0.5) !important;
+    border-bottom:1px solid rgba(255, 255, 255, 0.5) !important;
+    padding-bottom: 5px !important;
+    padding-top:5px !important;
+  }
+  .panchkulaextension .card {
+    margin: 0px !important;
+    border-bottom: 1px solid #000 !important;
+  }
+  .panchkulaextension .card img{
+    opacity: 1 !important;
+  }
+  .panchkulaextension .card .banner_text{
+    padding-top: 60px !important; 
+  }
+  /* Contact Us */
+  .contactus{
+    padding: 10px !important;
+  }
+  .contactus h4{
+    text-align: center!important;
+    font-style:underline !important;
+  }
+  .contactus_footer{
+    margin-bottom: 11px !important;
+  }
+  .contactus_footer .button{
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 18px !important;
+    font-weight: 900 !important;
+  }
+
+  .contactus .tel{
+    font-size: 22px !important;
+    text-decoration: none !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+  }
+  .contactus .icon{
+    font-size: 25px !important;
+    padding-right:15px !important;
+    color: #387EF5 !important;
+  }
+
+  /* Inquiry Form */
+  .inquiryform .card{
+    text-align: center !important;
+    padding: 0px 5px 0px 5px !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+   /* border: 1px solid #000 !important; */
+    margin-bottom: 16px !important;
+    color: #fff !important;
+    /* border-radius: 8px !important; */
+  }
+  .panchkulaextension2 h3{
+      text-align:center !important;
+      text-decoration:underline !important;
+  }
+   .panchkulaextension2 .card{
+      padding:20px !important;
+  }
+  .panchkulaextension2 .mytableft{
+      margin-right: 5px !important;
+      padding: 20px 20px 20px 20px !important;
+      line-height: 30px !important;
+      text-align: center !important;
+      border: 1px solid #ddd !important;
+      float:left !important;
+      color: #fff !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      background: url('../../../img/cute.jpg') !important;
+      border-bottom: 5px solid #28a54c !important;"
+  }
+    .panchkulaextension2 .mytabright{
+      margin-right: 5px !important;
+      padding: 20px 20px 20px 20px !important;
+      line-height: 30px !important;
+      text-align: center !important;
+      border: 1px solid #ddd !important;
+      float:right !important;
+      color: #fff !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      background: url('../../../img/cute.jpg') !important;
+      border-bottom: 5px solid #28a54c !important;"
+  }

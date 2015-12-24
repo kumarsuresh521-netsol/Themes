@@ -45,15 +45,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
   
-  .state('app.lists', {
-    url: '/category/:categoryId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/lists.html',
-        controller: 'ListCtrl'
-      }
-    }
-  })
   
   .state('app.aboutus', {
     url: '/aboutus',
@@ -91,32 +82,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
   
-  .state('app.details', {
-    url: '/category/:listId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/details.html',
-        controller: 'DetailsCtrl'
-      }
-    }
-  })
-  
-  .state('app.pane', {
-    url: '/pane',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/pane.html',
-        controller: 'PaneCtrl'
-      }
-    }
-  })
+
 
   .state('app.abouttheproject', {
     url: '/abouttheproject',
     views: {
       'menuContent': {
-        templateUrl: 'templates/abouttheproject.html'//,
-        //controller: 'AboutTheProjectCtrl'
+        templateUrl: 'templates/abouttheproject.html',
+        controller: 'AboutTheProjectCtrl'
       }
     }
   })
@@ -157,53 +130,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       'menuContent': {
         templateUrl: 'templates/whatweareoffering.html'//,
         //controller: 'AboutTheProjectCtrl'
-      }
-    }
-  })
-  
-  .state('app.cart', {
-    url: '/cart',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/cart.html',
-        controller: 'CartCtrl'
-      }
-    }
-  })
-  
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
       }
     }
   });

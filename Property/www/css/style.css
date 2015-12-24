@@ -43,3 +43,28 @@ body.bar-subheader-slide-away {
 .bar .button{
   min-width: 85px important;
 }
+
+/* Read More CSS */
+.collapse-text-toggle {
+    font-size: 0.9em;
+    color: #000;
+    font-weight:600;
+    cursor: pointer;
+}
+.collapse-text-toggle:before {
+    content: '\00a0(';
+}
+.collapse-text-toggle:after {
+    content: ')';
+}
+
+.bar .button{
+  max-width:80px !important;
+  width: 80px !important;
+}
+
+.bar .button.back-button{
+  max-width:80px !important;
+  width: 80px !important;
+}
+
